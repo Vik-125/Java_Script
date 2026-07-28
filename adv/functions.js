@@ -32,3 +32,22 @@ function addCart(val1, val2, ...num1){
 }
 
 console.log(addCart(120, 182, 92, 312))
+
+
+
+
+
+
+
+// Here hoisting is not needed
+console.log(addi(2))
+function addi(num){
+    return num + 2
+}
+
+
+// Here hoisting is needed!!!
+const addTwo = function(num){
+    return num + 2
+}
+console.log(addTwo (5))
