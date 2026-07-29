@@ -25,9 +25,37 @@ console.log("LESSS GOOO")
 
 
 
-// for of   : used for objects in an array.
+// For-of   : used for objects in an array.
 const arr = [5, 2, 4, 7, 1]
-
 for(const num of arr){
     console.log(num)
 }
+
+
+
+
+// For-in loop  ( we can used it for iterating over object.)
+const myObject = {
+    js : 'javascript',
+    cpp : 'c++',
+    rb : 'ruby'
+}
+for(const key in myObject){
+    console.log(`${key} is short-cut for ${myObject[key]}.`)
+}
+
+
+
+// For-each loop
+const c = ["cpp", "c", "java", "js", "ts"]
+
+c.forEach(function (item) {console.log(item)})
+
+
+
+
+// filter
+const myNums = [1, 5, 2, 7, 3, 4]
+
+const newNums = myNums.filter( (num) => num > 4)
+console.log(newNums)
