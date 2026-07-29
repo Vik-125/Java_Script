@@ -59,3 +59,12 @@ const myNums = [1, 5, 2, 7, 3, 4]
 
 const newNums = myNums.filter( (num) => num > 4)
 console.log(newNums)
+
+
+
+// .reduce
+const arry = [6, 1, 23, 5]
+const total = arry.reduce(function (acc, currval){
+    return acc + currval
+}, 0)       // here 0 is the first value stored in the acc.
+console.log(total)
