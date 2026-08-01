@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit & Delete Element</title>
+</head>
+<body style="background-color: black;color: aqua;">
+    <ul class ="lang">
+        <li>JS</li>
+    </ul>
+</body>
+<script>
+    function addLang(langName){
+        const li = document.createElement('li');
+        li.innerHTML = `${langName}`
+
+        document.querySelector('.lang').appendChild(li)
+    }
+    addLang("cpp")
+    addLang("C")
+
+    // More efficient Function
+    function addOptiLang(langName){
+        const li = document.createElement('li')
+        li.appendChild(document.createTextNode(langName))
+        document.querySelector('.lang').appendChild(li)
+    }
+    addOptiLang('golang')
+
+
+    // Edit
+    const secondLang = document.querySelector("li:nth-child(2)")
+    //again less efficient , due to innerHTML
+    // secondLang.innerHTML = "gg"
+
+    const newLi = document.createElement('li')
+    newLi.textContent = "GG"
+    secondLang.replaceWith(newLi)
+
+    // edit
+    const lastLang = document.querySelector('li:last-child')
+    lastLang.remove()
+</script>
+</html>
