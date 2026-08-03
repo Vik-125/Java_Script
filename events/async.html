@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>set Interval / Time-out</title>
+</head>
+<body>
+    <h1>Set Interval / Set Timeout</h1>
+    <button id ="stop">Stop</button>
+</body>
+<script>
+    // It'll run the function after the alloted time.
+    // 1st way to use.
+    setTimeout(function(){
+        console.log("Fonsi")
+    }, 2000)
+
+    // 2nd way!
+    const sayYeah = function(){
+        console.log("Yeah")
+    }
+    const sy = setTimeout(sayYeah, 2000)
+
+    const changeText = function(){
+        document.querySelector('h1').innerHTML = "best Song"
+    }
+    const changeMe = setTimeout(changeText,2000)
+    
+    document.querySelector('#stop').addEventListener('click', function(){
+        clearTimeout(changeMe)
+        clearTimeout(sy)
+        clearTimeout()
+        console.log("STOPPED")
+    })
+</script>
+</html>
