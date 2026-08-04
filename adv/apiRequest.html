@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Requesting from an API</title>
+</head>
+<body style="background-color: black;">
+    Lorem ipsum dolor sit amet consectetur 
+    adipisicing elit. Perspiciatis, vero ipsa? Itaque quos amet quod quidem soluta 
+    omnis officia, provident pariatur tempora asperiores ab deleniti minus est magnam, 
+    eum aliquid!
+</body>
+<script>
+    const requestURL = "https://api.github.com/users/Vik-125"
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET',requestURL)
+
+    // For checking the status of xhr , continuosly
+    xhr.onreadystatechange = function(){
+        console.log(xhr.readyState)
+        if(xhr.readyState === 4){
+            // Now convert the api, from string to JSON.
+            const currData = JSON.parse(this.responseText)
+            console.log(currData)
+            console.log(currData.id)
+        }
+    }
+
+    // For sending the calls to the api.
+    xhr.send()
+</script>
+</html>
