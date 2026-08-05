@@ -20,14 +20,14 @@ console.log(user.getUserDetails());
 // Before ES6 it was the main way to create object blueprints.
 // Now we use class with a constructor method.
 
-function User(username, loginCount){
-    this.username = username,
+function User1(username, loginCount){
+    this.username = username,  
     this.loginCount = loginCount
 
     return this;
 }
 
-const userOne = new User("bun",12)
-const userTwo = new User('Drek',1)
+const userOne = new User1("bun",12)
+const userTwo = new User1('Drek',1)
 console.log(userOne)
 console.log(userTwo)
